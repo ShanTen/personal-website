@@ -56,10 +56,95 @@ img.next-image {
   margin: 0;
 }
 
+img.next-image:hover {
+  cursor: pointer;
+  transform: scale(1.05);  
+  transition: transform 0.3s ease;
+}
+
+img.next-image:focus {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
 .prose a {
   color: #0074de;
 }
 
 .nav-line .nav-link {
   color: #69778c;
+}
+
+.pictures-grid-showcase{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pictures-grid-showcase img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.25rem;
+}
+
+.socials-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* push to bottom of screen */
+  margin-top: auto;
+}
+
+/* Show for mobile */
+@media only screen and (max-width: 600px) {
+    .custom-badge-container {
+      position: relative;
+      /* display: inline-block; */
+    }
+  
+  .custom-badge {
+    align-items: center;
+    position: absolute;
+    bottom: 15%;
+    right: 27%;
+    background-color: #a8d7b1; 
+    color: white;
+    border-radius: 50%;
+    border: 1px solid #121212;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 14px;
+    font-weight: bold;
+  }  
+}
+
+/* Hide for desktops */
+@media only screen and (min-width: 600px) {
+  .custom-badge {
+    display: none;
+  }
+}
+
+.github-card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.github-item-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
